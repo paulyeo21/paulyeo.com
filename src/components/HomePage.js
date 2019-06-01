@@ -1,13 +1,12 @@
 import React, { Component } from "react";
 import { render } from "react-dom";
-import BlogsContainer from "./BlogsContainer";
+import HomePageArticleContainer from "./HomePageArticleContainer";
 
 export default class HomePage extends Component {
   render() {
     return (
-      <div>
-        <b>paulyeo.com</b>
-        <BlogsContainer />
+      <div className="homepage">
+        <HomePageArticleContainer />
       </div>
     );
   }

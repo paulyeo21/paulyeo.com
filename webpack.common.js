@@ -1,5 +1,6 @@
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const autoprefixer = require("autoprefixer");
 
 module.exports = {
   entry: path.resolve(__dirname, "src", "index.js"),
@@ -16,9 +17,33 @@ module.exports = {
         use: "babel-loader"
       },
       {
-        test: /\.css$/,
-        loader: [ MiniCssExtractPlugin.loader, "css-loader"]
-      },
+        test: /\.(sa|sc|c)ss$/,
+        use: [ 
+          MiniCssExtractPlugin.loader,
+          {
+            loader: "css-loader",
+            options: {
+              sourceMap: true,
+              importLoaders: 1
+            }
+          },
+          {
+            loader: "postcss-loader",
+            options: {
+              plugins: () => [
+                require("postcss-flexbugs-fixes"),
+                autoprefixer()
+              ]
+            }
+          },
+          {
+            loader: "sass-loader",
+            options: {
+              sourceMap: true
+            }
+          }
+        ]
+      }
     ]
   },
   plugins: [
