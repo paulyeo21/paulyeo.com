@@ -1,24 +1,26 @@
 import React, { Component } from "react";
 import { render } from "react-dom";
 import { Link } from "react-router-dom";
-
-function shortenBodyText(body) {
-  return body.slice(0,200) + "..."
-}
+import { shortenBodyText, generateHandle } from "../helpers/articleHelpers.js";
 
 export default class HomePageArticleBlob extends Component {
   render() {
+    var handle = generateHandle(this.props.title);
+
     return (
       <div className="article-blob">
-        <Link to={this.props.handle} className="article-blob-title"> 
+        <Link to={handle} className="article-blob-title"> 
           {this.props.title}
         </Link>
         <div className="article-blob-date">{this.props.date}</div>
-        <div className="article-body">
-          {shortenBodyText(this.props.body)}
+        <span
+          className="article-body"
+          dangerouslySetInnerHTML={{__html: shortenBodyText(this.props.body)}}
+        />
+        <span>
           {'  '}
-          <Link to={this.props.handle}>More</Link>
-        </div>
+          <Link to={handle}>More</Link>
+        </span>
       </div>
     );
   }

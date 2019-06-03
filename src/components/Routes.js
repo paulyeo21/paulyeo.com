@@ -4,6 +4,7 @@ import { Switch, Route } from "react-router-dom";
 import Article from "./Article";
 import HomePage from "./HomePage";
 import articles from "../data/articles.json";
+import { generateHandle } from "../helpers/articleHelpers.js";
 
 export default class Routes extends Component {
   render() {
@@ -14,14 +15,13 @@ export default class Routes extends Component {
             <Route
               exact
               key={article.id}
-              path={"/" + article.handle}
+              path={"/" + generateHandle(article.title)}
               render={() =>
                 <Article
                   key={article.id}
                   title={article.title}
                   date={article.date}
                   body={article.body}
-                  handle={article.handle}
                 />}
             />
           )

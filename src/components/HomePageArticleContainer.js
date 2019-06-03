@@ -12,7 +12,6 @@ export default class HomePageArticleContainer extends Component {
           title={article.title}
           date={article.date}
           body={article.body}
-          handle={article.handle}
         />
       )
     );
