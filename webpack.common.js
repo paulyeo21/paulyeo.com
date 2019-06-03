@@ -1,6 +1,7 @@
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const autoprefixer = require("autoprefixer");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   entry: path.resolve(__dirname, "src", "index.js"),
@@ -47,6 +48,7 @@ module.exports = {
     ]
   },
   plugins: [
-    new MiniCssExtractPlugin({filename: "assets/[name].css"})
+    new MiniCssExtractPlugin({filename: "assets/[name].css"}),
+    new HtmlWebpackPlugin({template: "src/static/index.html"})
   ]
 };
