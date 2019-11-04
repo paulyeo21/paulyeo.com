@@ -3,7 +3,7 @@ import { render } from "react-dom";
 import { Switch, Route } from "react-router-dom";
 import Article from "./Article";
 import HomePage from "./HomePage";
-import articles from "../data/articles.json";
+import articles from "../data/articles.js";
 import { generateHandle } from "../helpers/articleHelpers.js";
 
 export default class Routes extends Component {

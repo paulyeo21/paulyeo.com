@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { render } from "react-dom";
 import HomePageArticleBlob from "./HomePageArticleBlob.js";
-import articles from "../data/articles.json";
+import articles from "../data/articles.js";
 
 export default class HomePageArticleContainer extends Component {
   render() {

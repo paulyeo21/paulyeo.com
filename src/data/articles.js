@@ -1,4 +1,10 @@
-[
+const data = [
+  {
+    "id": 9,
+    "title": "Runescape RNG",
+    "date": "October 10, 2019",
+    "body": "<b>Runescape RNG</b><p>Random thought, but building life skills is kind of like RNG in Runescape. In Runescape you can obtain rare items by killing monsters. Those monsters have a range of items they randomly drop. The more rare items drop at less frequent rates while common items drop frequently. The probability of a drop is determined beforehand and whether you are lucky or not is referred in the gaming industry as RNG or Random Number Generator. Building life skills is sort of like that process. Talent varies person by person so learning happens at a different pace for everyone. For some they're lucky and they get a rare drop on their first 10 kills; for others, they're not so lucky and it takes them 1000 hours to play the piano.</p>"
+  },
   {
     "id": 8,
     "title": "My Principles",
@@ -41,10 +47,12 @@
     "date": "September 3, 2018",
     "body": "I hate being doubted. I hate when someone tells me I can’t. Who are you to tell me what I’m capable of? I know I’m capable of a lot of things. If you tell me you I can’t do something, you better have some good ass reasons otherwise my life’s purpose might be to prove you wrong. Magic Johnson once said he loved to prove others wrong. I feel the same way. When I’m slighted I do an internal argument. I think through why that person is slighting me. And I think through why they’re wrong for slighting me. And usually it ends with frustration, but ultimately helps me reason through my emotions and motivates me to do better, to do more."
   },
-  {
-    "id": 1,
-    "title": "Hoes will be hoes",
-    "date": "November 30, 2018",
-    "body": "It's unfortunate that in our male dominated society, the only opportunity some women have is to sell their looks or body. I don't mean just prostitution, but more of the subtle type. There are more to hoes than booty shaking mamas. There are people in general regardless of gender who profit off their looks. Whether that is as simple as a first impression in an interview or as complicated as a marriage founded on appearance. This is not a judgment piece; more of a realization from having had the luxury of being on both sides of the transaction. Be self-sufficient and don't let anybody dictate your life entirely. It's pretty obvious, but if you realize that you are a hoe who has pinned his whole identity on appearance, don't be surprised for that day when you sag and wither and everyone who showed up before because you were pretty, don't treat you the same."
-  }
-]
+  // {
+  //   "id": 1,
+  //   "title": "Hoes will be hoes",
+  //   "date": "November 30, 2018",
+  //   "body": "It's unfortunate that in our male dominated society, the only opportunity some women have is to sell their looks or body. I don't mean just prostitution, but more of the subtle type. There are more to hoes than booty shaking mamas. There are people in general regardless of gender who profit off their looks. Whether that is as simple as a first impression in an interview or as complicated as a marriage founded on appearance. This is not a judgment piece; more of a realization from having had the luxury of being on both sides of the transaction. Be self-sufficient and don't let anybody dictate your life entirely. It's pretty obvious, but if you realize that you are a hoe who has pinned his whole identity on appearance, don't be surprised for that day when you sag and wither and everyone who showed up before because you were pretty, don't treat you the same."
+  // }
+];
+
+export default data;
